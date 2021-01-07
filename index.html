@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>GenerateFace</h1>
+
+<?php
+$all_images = glob("/your/directory/{*.jpg, *.JPG, *.JPEG, *.png, *.PNG}", GLOB_BRACE);
+
+// shuffle($all_images); // uncomment this line to randomize the images
+
+$images = array();
+
+foreach ($all_images as $index => $image) {
+     if ($index == 1) break;  // Only print 15 images
+     $image_name = basename($image);
+     echo "<img src='/avatars/{$image_name}' />";
+}
+?>
+
+</body>
+</html>
