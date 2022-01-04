@@ -7,6 +7,6 @@ function RandomAvatar() {
 }
 function RandomAvatarUrl() {
     var Name = imgArray[Math.floor(Math.random() * 3489)];;
-    var imgPath = window.location.host  +'/avatars/' + Name;
-    document.getElementById("json").textContent =imgPath;
+    var imgPath = window.location.href.replace('GetAvatar.html', '') + 'avatars/' + Name;
+    document.getElementById("json").textContent = imgPath;
 }
