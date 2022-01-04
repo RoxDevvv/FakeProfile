@@ -10,3 +10,8 @@ function RandomAvatarUrl() {
     var imgPath = window.location.href.replace('GetAvatar.html', '') + 'avatars/' + Name;
     document.getElementById("json").textContent = imgPath;
 }
+function RandomAvatarUrlApi() {
+    var Name = imgArray[Math.floor(Math.random() * 3489)];;
+    var imgPath = window.location.href.replace('RandomAvatar.js', '') + 'avatars/' + Name;
+    return imgPath;
+}
